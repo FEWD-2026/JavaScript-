@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: lightyellow;">
+    <script>
+        
+        let income = Number(prompt("Enter your annual income: "));
+        let taxRate;
+        if (income <= 250000) {
+            taxRate = 0;
+        } else if (income <= 500000) {
+            taxRate = 5;
+        } else if (income <= 1000000) {
+            taxRate = 20;
+        } else {
+            taxRate = 30;
+        }
+        let taxAmount = (income * taxRate) / 100;
+        document.write("Income: " + income + "<br>");
+        document.write("Tax Rate: " + taxRate + "%<br>");
+        document.write("Tax Amount: " + taxAmount + "<br>");
+    </script>
+</body>
+</html>

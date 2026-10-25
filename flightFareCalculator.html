@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let passengerName = prompt("Enter the passenger's name: ");
+        let age = parseInt(prompt("Enter the passenger's age: "));
+        let travelClass = prompt("Enter the travel class (economy/business/first): ").toLowerCase();
+        let baggageWeight = parseFloat(prompt("Enter the baggage weight in kg: "));
+        let weekday = prompt("Is it a weekday? (yes/no): ").toLowerCase();
+        let ticketPrice;
+
+        // Calculate ticket price based on travel class
+        switch (travelClass) {
+            case "economy":
+                ticketPrice = 2000;
+                break;
+            case "business":
+                ticketPrice = 50000;
+                break;
+            case "first":
+                ticketPrice = 10000;
+                break;
+            default:
+                alert("Invalid travel class entered.");
+                break;
+        }
+
+        // Apply weekday discount
+        if (weekday === "yes") {
+            ticketPrice *= 0.8; // Apply 20% discount
+        }
+
+        // Add baggage fee
+        if (baggageWeight > 30) {
+            ticketPrice += (baggageWeight - 30) * 10; // rs10 per extra kg
+        }
+
+        // Display the result
+        document.write("Passenger Name: " + passengerName + "<br>");
+        document.write("Age: " + age + "<br>");
+        document.write("Travel Class: " + travelClass + "<br>");
+        document.write("Baggage Weight: " + baggageWeight + " kg<br>");
+        document.write("Weekday: " + weekday + "<br>");
+        document.write("Ticket Price: rs" + ticketPrice.toFixed(2) + "<br>");
+    </script>
+</body>
+</html>

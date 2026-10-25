@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let patientName=prompt("Enter the patient's name: ");
+        let age=parseInt(prompt("Enter the patient's age: "));
+        let symptoms=prompt("Enter the patient's symptoms: ");
+        let condition=prompt("Enter the patient's condition (critical/urgent/normal): ").toLowerCase();
+        let heartRate=parseInt(prompt("Enter the patient's heart rate: "));
+        let bloodPressure=parseInt(prompt("Enter the patient's blood pressure: "));
+        let temperature=parseFloat(prompt("Enter the patient's temperature: "));
+        let oxygenSaturation=parseInt(prompt("Enter the patient's oxygen saturation: "));
+       if(condition==="critical"){
+        document.write("Patient Name: " + patientName + "<br>");
+        document.write("Age: " + age + "<br>");
+        document.write("Symptoms: " + symptoms + "<br>");
+        document.write("Condition: " + condition + "<br>");
+        document.write("Heart Rate: " + heartRate + "<br>");
+        document.write("Blood Pressure: " + bloodPressure + "<br>");
+        document.write("Temperature: " + temperature + "<br>");
+        document.write("Oxygen Saturation: " + oxygenSaturation + "<br>");
+       } else if(condition==="urgent"){
+        document.write("Patient Name: " + patientName + "<br>");
+        document.write("Age: " + age + "<br>");
+        document.write("Symptoms: " + symptoms + "<br>");
+        document.write("Condition: " + condition + "<br>");
+       } else if(condition==="normal"){
+        document.write("Patient Name: " + patientName + "<br>");
+        document.write("Age: " + age + "<br>");
+        document.write("Symptoms: " + symptoms + "<br>");
+       } else{
+        alert("Invalid condition entered. Please enter 'critical', 'urgent', or 'normal'.");
+       }
+       if(heartRate<60 || heartRate>100){
+        alert("Abnormal heart rate detected. Please consult a doctor.");
+       }
+       if(bloodPressure<90 || bloodPressure>140){
+        alert("Abnormal blood pressure detected. Please consult a doctor.");
+       }
+       if(temperature<36 || temperature>40){
+        alert("Abnormal temperature detected. Please consult a doctor.");
+       }
+       if(oxygenSaturation<90){
+        alert("Abnormal oxygen saturation detected. Please consult a doctor.");
+       }if(condition==="critical"){
+        alert("Patient is in critical condition. Immediate medical attention required.");
+       } else if(condition==="urgent"){
+        alert("Patient is in urgent condition. Please prioritize treatment.");
+       } else if(condition==="normal"){
+        alert("Patient is in normal condition. Routine care can be provided.");
+       }
+    </script>
+</body>
+</html>

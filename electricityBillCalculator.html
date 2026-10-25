@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>let connectionType =prompt("Enter connection type (Domestic/Commercial): ");
+let unitsConsumed = parseFloat(prompt("Enter units consumed: "));   
+if (connectionType=="Domestic") {
+    if (unitsConsumed <= 100) {
+        var billAmount = unitsConsumed * 8;
+    } else {
+        var billAmount = 800 + (unitsConsumed - 100) * 10;
+    }
+} else {
+    if (unitsConsumed <= 100) {
+        var billAmount = unitsConsumed * 15;
+    } else {
+        var billAmount = 1500 + (unitsConsumed - 100) * 20;
+    }
+}
+document.write("Bill Amount: " + billAmount);</script>
+</body>
+</html>

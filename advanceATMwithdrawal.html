@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let pin=Number(prompt("Enter PIN: "));
+      let balance=100000;
+      let withdrawalAmount=Number(prompt("Enter withdrawal amount: "));
+      if(pin==1234)
+      { if(withdrawalAmount<=20000){
+          if(withdrawalAmount<=balance){
+              balance-=withdrawalAmount;
+              document.write("Withdrawal successful!<br>");
+              document.write("Remaining balance: " + balance);
+              document.write("Account Status: Active");
+          }
+          else {
+              document.write("Insufficient balance.");
+          }
+        }
+      else {
+          document.write("Withdrawal amount exceeds the limit of 20000.");
+      }}
+       else {
+          document.write("Incorrect PIN.");
+      }
+    </script>
+  </body>
+</html>

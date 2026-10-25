@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Restaurant Billing System
+        document.write("<h2>Restaurant Billing System</h2>");
+        let item1 = prompt("Enter the name of item 1:");
+        let price1 = parseFloat(prompt("Enter the price of item 1:"));
+        let item2 = prompt("Enter the name of item 2:");
+        let price2 = parseFloat(prompt("Enter the price of item 2:"));
+        let item3 = prompt("Enter the name of item 3:");
+        let price3 = parseFloat(prompt("Enter the price of item 3:"));
+        let totalAmount = price1 + price2 + price3;
+        let taxRate = 0.1; // 10% tax
+        let serviceChargeRate = 0.05; // 5% service charge
+        let serviceCharge = totalAmount * serviceChargeRate;
+        let taxAmount = totalAmount * taxRate;
+        let finalAmount = totalAmount + serviceCharge + taxAmount;
+        let memership=isFinite(prompt("Are you a member? (yes/no)"));
+        if(memership){
+            finalAmount=finalAmount*0.9;
+        }
+        document.write("<p>Total Amount: rs" + totalAmount.toFixed(2) + "</p>");
+        document.write("<p>Service Charge: rs" + serviceCharge.toFixed(2) + "</p>");
+        document.write("<p>Tax Amount: rs" + taxAmount.toFixed(2) + "</p>");
+        document.write("<p>Final Amount: rs" + finalAmount.toFixed(2) + "</p>");
+    </script>
+</body>
+</html>

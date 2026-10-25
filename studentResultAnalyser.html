@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: lightblue;">
+    <script>
+        
+        let marks = Number(prompt("Enter your marks: "));
+        let totalMarks = 100;
+        let percentage = (marks / totalMarks) * 100;
+        let attendance = Number(prompt("Enter your attendance percentage: "));
+        document.write("Percentage: " + percentage + "%<br>");
+        document.write("Attendance: " + attendance + "%<br>");
+        if (marks >= 90) {
+            document.write("Grade: A");
+        } else if (marks >= 80) {
+            document.write("Grade: B");
+        } else if (marks >= 70) {
+            document.write("Grade: C");
+        } else if (marks >= 60) {
+            document.write("Grade: D");
+        } else {
+            document.write("Grade: F");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    let studentName = prompt("Enter the student's name: ");
+    let studentAge = parseInt(prompt("Enter the student's age: "));
+    let studentGrade = parseInt(prompt("Enter the student's grade (1-12): "));
+    let studentPercentage = parseFloat(prompt("Enter the student's percentage (0.0-100.0): "));
+    if ( studentGrade >= 12) {
+        if (studentPercentage >= 90) {
+            document.write("Congratulations " + studentName + "! You have been admitted to the college with a scholarship.");
+        } else if (studentPercentage >= 75) {
+            document.write("Congratulations " + studentName + "! You have been admitted to the college.");
+        } else {
+            document.write("Sorry " + studentName + ", you do not meet the admission criteria.");
+        }
+    } else {
+        alert("Invalid grade entered. Please enter a grade between 1 and 12.");
+    }
+   </script> 
+</body>
+</html>

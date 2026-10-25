@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let age = Number(prompt("Enter your age: "));
+
+        let income = Number(prompt("Enter your annual income: "));
+        let creditScore = Number(prompt("Enter your credit score: "));
+        let loanEligibility;
+        if (age >= 18 && income >= 25000 && creditScore >= 700) {
+            loanEligibility = "Eligible for loan";
+        } else {
+            loanEligibility = "Not eligible for loan";
+        }
+        document.write("Age: " + age + "<br>");
+        document.write("Income: " + income + "<br>");
+        document.write("Credit Score: " + creditScore + "<br>");
+        document.write("Loan Eligibility: " + loanEligibility + "<br>");
+    </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let vehicleType = prompt("Enter your vehicle type (car/bike): ").toLowerCase();
+        if (vehicleType === "car") {
+            let speed = parseInt(prompt("Enter your speed: "));
+            if(speed>65){
+                let fine = (speed - 65) * 5;
+                alert("You are fined: RS" + fine);
+            } else {
+                alert("No fine. Drive safely!");
+            }
+            let hasInsurance = confirm("Do you have insurance? Click OK for Yes, Cancel for No.");
+            if (!hasInsurance) {
+                alert("You are fined an additional RS200 for not having insurance.");
+            }
+            let hasLicense = confirm("Do you have a valid driving license? Click OK for Yes, Cancel for No.");
+            if (!hasLicense) {
+                alert("You are fined an additional RS500 for not having a valid driving license.");
+            }   let hasRegistration = confirm("Do you have a valid vehicle registration? Click OK for Yes, Cancel for No.");
+            if (!hasRegistration) {
+                alert("You are fined an additional RS300 for not having a valid vehicle registration.");
+            }   
+            let wearingSeatbelt = confirm("Are you wearing a seatbelt? Click OK for Yes, Cancel for No.");
+            if (!wearingSeatbelt) {
+                alert("You are fined an additional RS100 for not wearing a seatbelt.");
+            }
+            document.write(hasInsurance ? "You have insurance.<br>" : "You do not have insurance.<br>",
+                hasLicense ? "You have a valid driving license.<br>" : "You do not have a valid driving license.<br>",
+                hasRegistration ? "You have a valid vehicle registration.<br>" : "You do not have a valid vehicle registration.<br>",
+                wearingSeatbelt ? "You are wearing a seatbelt.<br>" : "You are not wearing a seatbelt.<br>");
+                let totalFine=(  (speed>65 ? (speed - 65) * 5 : 0) +
+                (hasInsurance ? 0 : 200) +
+                (hasLicense ? 0 : 500) +
+                (hasRegistration ? 0 : 300) +
+                (wearingSeatbelt ? 0 : 100));
+            document.write("Total fine amount: RS" + totalFine);
+        } else if (vehicleType === "bike") {
+            let speed = parseInt(prompt("Enter your speed: "));
+            if(speed>50){
+                let fine = (speed - 50) * 5;
+                alert("You are fined: RS" + fine);
+            } else {
+                alert("No fine. Drive safely!");
+            }
+            let hasInsurance = confirm("Do you have insurance? Click OK for Yes, Cancel for No.");
+            if (!hasInsurance) {
+                alert("You are fined an additional RS100 for not having insurance.");
+            }
+            let hasLicense = confirm("Do you have a valid driving license? Click OK for Yes, Cancel for No.");
+            if (!hasLicense) {
+                alert("You are fined an additional RS500 for not having a valid driving license.");
+            }   
+            let hasRegistration = confirm("Do you have a valid vehicle registration? Click OK for Yes, Cancel for No.");
+            if (!hasRegistration) {
+                alert("You are fined an additional RS300 for not having a valid vehicle registration.");
+            }   
+            let wearingHelmet = confirm("Are you wearing a helmet? Click OK for Yes, Cancel for No.");
+            if (!wearingHelmet) {
+                alert("You are fined an additional RS150 for not wearing a helmet.");
+            }
+            document.write(hasInsurance ? "You have insurance.<br>" : "You do not have insurance.<br>",
+                hasLicense ? "You have a valid driving license.<br>" : "You do not have a valid driving license.<br>",
+                hasRegistration ? "You have a valid vehicle registration.<br>" : "You do not have a valid vehicle registration.<br>",
+                wearingHelmet ? "You are wearing a helmet.<br>" : "You are not wearing a helmet.<br>");
+                let totalFine= (speed>50 ? (speed - 50) * 5 : 0) +
+                (hasInsurance ? 0 : 100) +
+                (hasLicense ? 0 : 500) +
+                (hasRegistration ? 0 : 300) +
+                (wearingHelmet ? 0 : 150);
+            document.write("Total fine amount: RS" + totalFine);
+        } else {
+            alert("Invalid vehicle type entered. Please enter 'car' or 'bike'.");
+        }
+    </script>
+</body>
+</html>

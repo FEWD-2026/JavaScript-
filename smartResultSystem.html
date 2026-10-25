@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let marks1 = prompt("Enter marks for Subject 1:");
+       let marks2 = prompt("Enter marks for Subject 2:");
+       let marks3 = prompt("Enter marks for Subject 3:");
+       let practicalMarks = prompt("Enter practical marks:");
+       let totalMarks = parseFloat(marks1) + parseFloat(marks2) + parseFloat(marks3) + parseFloat(practicalMarks);
+       let averageMarks = totalMarks / 4;
+       let attendance = prompt("Enter attendance percentage:");
+
+       let scholarshipEligibility = (attendance >= 75 && averageMarks >= 60) ? "Eligible for scholarship" : "Not eligible for scholarship";
+       document.write("<p>Scholarship Eligibility: " + scholarshipEligibility + "</p>");
+       let diciplineStatus = (attendance >= 75) ? "Good" : "Poor";
+       document.write("<p>Discipline Status: " + diciplineStatus + "</p>");
+       let backlogStatus = (averageMarks < 40) ? "Has backlog" : "No backlog";
+       document.write("<p>Backlog Status: " + backlogStatus + "</p>");
+         if (attendance < 75) {
+              document.write("<p>Attendance is below 75%. You are not eligible for the exam and scholarship.</p>");
+         } else {
+              document.write("<p>Attendance is sufficient. You are eligible for the exam.</p>");
+         }
+       document.write("<p>Total Marks: " + totalMarks.toFixed(2) + "</p>");
+       document.write("<p>Average Marks: " + averageMarks.toFixed(2) + "</p>");
+    </script>
+</body>
+</html>

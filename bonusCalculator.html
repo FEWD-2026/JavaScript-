@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    let salary = parseFloat(prompt("Enter your salary: "));
+    let yearsOfService = parseInt(prompt("Enter your years of service: "));
+    let attendance = parseInt(prompt("Enter your attendance percentage: "));
+    let performanceRating = parseInt(prompt("Enter your performance rating (1-5): "));
+    if (yearsOfService > 4 && attendance > 90 && performanceRating >= 4) {
+        let bonus = salary * 0.1; // 10% bonus
+        document.write("Congratulations! You are eligible for a bonus of RS" + bonus);
+    } 
+    else if (yearsOfService > 3 && attendance > 80 && performanceRating >= 3) {
+        document.write("You are eligible for a bonus of RS" + (salary * 0.05));
+    } else if (yearsOfService > 5) {
+        document.write("You are eligible for a bonus of RS" + (salary * 0.02));
+    } else {
+        document.write("Sorry, you are not eligible for a bonus.");
+    }
+   </script> 
+</body>
+</html>

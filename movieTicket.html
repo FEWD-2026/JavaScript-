@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let movieName = prompt("Enter the movie name: ");
+        let ticketPrice = parseFloat(prompt("Enter the ticket price: "));
+        let numberOfTickets = parseInt(prompt("Enter the number of tickets: "));
+        seatType = prompt("Enter the seat type (regular/premium): ").toLowerCase();
+        let showTime = prompt("Enter the show time (morning/afternoon/evening): ").toLowerCase();
+        if (seatType === "premium") {
+            ticketPrice += 50; // Add RS50 for premium seats
+        }if (showTime === "evening") {
+            ticketPrice += 20; // Add RS20 for evening shows
+        }
+        if (weekday = prompt("Is it a weekday? (yes/no): ").toLowerCase() === "yes") {
+            ticketPrice -= 10; // Subtract RS10 for weekday shows
+        }
+        if (numberOfTickets > 5) {
+            ticketPrice -= 5; // Subtract RS5 for bulk booking
+        }
+        if (membership = prompt("Are you a member? (yes/no): ").toLowerCase() === "yes") {
+            ticketPrice -= 15; // Subtract RS15 for members
+        }
+        totalPrice = ticketPrice * numberOfTickets;
+
+        document.write("Movie Name: " + movieName + "<br>");
+        document.write("Ticket Price: RS" + ticketPrice + "<br>");
+    </script>
+</body>
+</html>
